@@ -3,21 +3,26 @@ print("\nCOUNTDOWN TIMER")
 print("Countdown from your choice of seconds\n")
 
 while True:
+    try:
 
-    seconds=int(input("\nEnter the seconds to countdown from: "))
-    if seconds <= 0:
-        print("Please enter a positive number lol")
-        continue
+        seconds=int(input("\nEnter the seconds to countdown from: "))
+    
+        if seconds <= 0:
+            print("Please enter a positive number lol")
+            continue
 
-    print(f"Starting Countdown from {seconds} seconds")
+        print(f"Starting Countdown from {seconds} seconds")
     
-    for i in range(seconds,0,-1):
-        print(f"{i} seconds remaining")
-        time.sleep(1)
+        for i in range(seconds,0,-1):
+            print(f"{i} seconds remaining")
+            time.sleep(1)
     
-    print("\nCOUNTDOWN COMPLETE")
+        print("\nCOUNTDOWN COMPLETE")
     
-    if not input("\nWanna continue countdown ??(y/n):").lower().startswith("y"):
-        print("GOODBYE")
-        break
+        if not input("\nWanna continue countdown ??(y/n):").lower().startswith("y"):
+            print("GOODBYE")
+            break
+    except ValueError:
+                print("please enter a positive number!!!")
+
     
